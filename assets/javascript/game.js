@@ -100,6 +100,57 @@ $(".startbtn").click(function () {
         run();
 
     });
+    $(".a2").click(function () {
+        stop();
+        $(".s2").css("display", "none");
+        $(".r1").css("display", "block");
+        if (pregunta == 2 || pregunta == 6) {
+            $(".correctanswer").text("Well Done");
+            correcta++;
+        } else {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
+            incorrecta++;
+        }
+        pregunta++;
+        seconds = 5;
+        paso = 2;
+        run();
+
+    });
+    $(".a3").click(function () {
+        stop();
+        $(".s2").css("display", "none");
+        $(".r1").css("display", "block");
+        if (pregunta == 3 || pregunta == 5) {
+            $(".correctanswer").text("Well Done");
+            correcta++;
+        } else {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
+            incorrecta++;
+        }
+        pregunta++;
+        seconds = 5;
+        paso = 2;
+        run();
+
+    });
+    $(".a4").click(function () {
+        stop();
+        $(".s2").css("display", "none");
+        $(".r1").css("display", "block");
+        if (pregunta == 4) {
+            $(".correctanswer").text("Well Done");
+            correcta++;
+        } else {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
+            incorrecta++;
+        }
+        pregunta++;
+        seconds = 5;
+        paso = 2;
+        run();
+
+    });
 
 
 
