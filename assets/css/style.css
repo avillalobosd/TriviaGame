@@ -1,0 +1,31 @@
+body{
+    background-image: url("../images/bg.jpg");
+    background-size: 100%;
+}
+.screen{
+    padding-top: 50px;
+}
+
+.backs{
+    height:700px;
+    text-align: center;
+    background-color: gray;
+}
+
+.titles1{
+    font-size: 60px;
+    font-weight: bolder;
+
+}
+
+.s2, .t1, .r1{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+
+.a1:hover, .a2:hover, .a3:hover, .a4:hover {
+    background-color: white;
+}
+
