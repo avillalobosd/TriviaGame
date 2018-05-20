@@ -7,9 +7,18 @@ body{
 }
 
 .backs{
-    height:700px;
+    height:600px;
     text-align: center;
     background-color: gray;
+}
+
+.final{
+    height:100px;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 80px;
 }
 
 .titles1{

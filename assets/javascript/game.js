@@ -24,7 +24,18 @@ $(".startbtn").click(function () {
     $(".a4").text(window['pregunta' + pregunta][4]);
     $("#remain").text("Remain time 5");
     function run() {
-        if (paso == 1) {
+        if(paso==3){
+            $(".t1").css("display", "none");
+            $(".s2").css("display", "none");
+            $(".r1").css("display", "none");
+            $(".final").css("display", "block");
+            $(".correctA").text("Correct: "+correcta);
+            $(".incorrectA").text("Inorrect: "+incorrecta);
+            clearInterval(intervalId);
+            return;
+        }
+        else if (paso == 1) {
+            $(".t1").css("display", "none");
             $(".s2").css("display", "block");
             $(".q1").text(window['pregunta' + pregunta][0]);
             $(".a1").text(window['pregunta' + pregunta][1]);
@@ -59,6 +70,7 @@ $(".startbtn").click(function () {
         }
 
     }
+    
 
 
 
@@ -72,7 +84,9 @@ $(".startbtn").click(function () {
             $(".t1").css("display", "block");
             $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
             pregunta++;
-            paso = 2;
+            if(pregunta==8){
+                paso = 3;}
+            else paso=2;
             seconds = 5;
             incorrecta++;
             run();
@@ -87,7 +101,7 @@ $(".startbtn").click(function () {
         stop();
         $(".s2").css("display", "none");
         $(".r1").css("display", "block");
-        if (pregunta == 1 || pregunta == 7) {
+        if (pregunta == 1 || pregunta==7) {
             $(".correctanswer").text("Well Done");
             correcta++;
         } else {
@@ -96,10 +110,14 @@ $(".startbtn").click(function () {
         }
         pregunta++;
         seconds = 5;
-        paso = 2;
+        if(pregunta==8){
+        paso = 3;}
+        else paso=2;
         run();
 
     });
+
+
     $(".a2").click(function () {
         stop();
         $(".s2").css("display", "none");
@@ -113,7 +131,9 @@ $(".startbtn").click(function () {
         }
         pregunta++;
         seconds = 5;
-        paso = 2;
+        if(pregunta==8){
+            paso = 3;}
+            else paso=2;
         run();
 
     });
@@ -130,7 +150,9 @@ $(".startbtn").click(function () {
         }
         pregunta++;
         seconds = 5;
-        paso = 2;
+        if(pregunta==8){
+            paso = 3;}
+            else paso=2;
         run();
 
     });
@@ -147,11 +169,12 @@ $(".startbtn").click(function () {
         }
         pregunta++;
         seconds = 5;
-        paso = 2;
+        if(pregunta==8){
+            paso = 3;}
+            else paso=2;
         run();
 
     });
-
 
 
 
