@@ -12,7 +12,7 @@ var intervalId;
 var correcta = 0;
 var incorrecta = 0;
 var paso = 1;
-var trash=0;
+var trash = 0;
 
 $(".startbtn").click(function () {
     $(".buttons1").css("display", "none");
@@ -24,13 +24,13 @@ $(".startbtn").click(function () {
     $(".a4").text(window['pregunta' + pregunta][4]);
     $("#remain").text("Remain time 5");
     function run() {
-        if(paso==3){
+        if (paso == 3) {
             $(".t1").css("display", "none");
             $(".s2").css("display", "none");
             $(".r1").css("display", "none");
             $(".final").css("display", "block");
-            $(".correctA").text("Correct: "+correcta);
-            $(".incorrectA").text("Inorrect: "+incorrecta);
+            $(".correctA").text("Correct: " + correcta);
+            $(".incorrectA").text("Inorrect: " + incorrecta);
             clearInterval(intervalId);
             return;
         }
@@ -70,7 +70,7 @@ $(".startbtn").click(function () {
         }
 
     }
-    
+
 
 
 
@@ -82,15 +82,31 @@ $(".startbtn").click(function () {
             stop();
             $(".s2").css("display", "none");
             $(".t1").css("display", "block");
-            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
+            if (pregunta == 1 || pregunta == 7) {
+                $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
+                incorrecta++;
+            }
+            else if (pregunta == 2 || pregunta == 6) {
+                $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][2]);
+                incorrecta++;
+            }
+            else if (pregunta == 3 || pregunta == 5) {
+                $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][3]);
+                incorrecta++;
+            }
+            else if (pregunta == 4) {
+                $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][4]);
+                incorrecta++;
+            }
             pregunta++;
-            if(pregunta==8){
-                paso = 3;}
-            else paso=2;
+            if (pregunta == 8) {
+                paso = 3;
+            }
+            else paso = 2;
             seconds = 5;
             incorrecta++;
             run();
-        
+
         }
         function stop() {
             clearInterval(intervalId);
@@ -101,18 +117,27 @@ $(".startbtn").click(function () {
         stop();
         $(".s2").css("display", "none");
         $(".r1").css("display", "block");
-        if (pregunta == 1 || pregunta==7) {
+        if (pregunta == 1 || pregunta == 7) {
             $(".correctanswer").text("Well Done");
             correcta++;
-        } else {
-            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
+        }  else if (pregunta == 2 || pregunta == 6) {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][2]);
+            incorrecta++;
+        }
+        else if (pregunta == 3 || pregunta == 5) {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][3]);
+            incorrecta++;
+        }
+        else if (pregunta == 4) {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][4]);
             incorrecta++;
         }
         pregunta++;
         seconds = 5;
-        if(pregunta==8){
-        paso = 3;}
-        else paso=2;
+        if (pregunta == 8) {
+            paso = 3;
+        }
+        else paso = 2;
         run();
 
     });
@@ -125,15 +150,24 @@ $(".startbtn").click(function () {
         if (pregunta == 2 || pregunta == 6) {
             $(".correctanswer").text("Well Done");
             correcta++;
-        } else {
+        } else if (pregunta == 1 || pregunta == 7) {
             $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
+            incorrecta++;
+        }
+        else if (pregunta == 3 || pregunta == 5) {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][3]);
+            incorrecta++;
+        }
+        else if (pregunta == 4) {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][4]);
             incorrecta++;
         }
         pregunta++;
         seconds = 5;
-        if(pregunta==8){
-            paso = 3;}
-            else paso=2;
+        if (pregunta == 8) {
+            paso = 3;
+        }
+        else paso = 2;
         run();
 
     });
@@ -144,15 +178,25 @@ $(".startbtn").click(function () {
         if (pregunta == 3 || pregunta == 5) {
             $(".correctanswer").text("Well Done");
             correcta++;
-        } else {
-            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
-            incorrecta++;
-        }
+        }  else if (pregunta == 2 || pregunta == 6) {
+                $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][2]);
+                incorrecta++;
+            }
+            else if (pregunta == 1 || pregunta == 7) {
+                $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
+                incorrecta++;
+            }
+            else if (pregunta == 4) {
+                $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][4]);
+                incorrecta++;
+            }
+        
         pregunta++;
         seconds = 5;
-        if(pregunta==8){
-            paso = 3;}
-            else paso=2;
+        if (pregunta == 8) {
+            paso = 3;
+        }
+        else paso = 2;
         run();
 
     });
@@ -163,15 +207,24 @@ $(".startbtn").click(function () {
         if (pregunta == 4) {
             $(".correctanswer").text("Well Done");
             correcta++;
-        } else {
+        } else if (pregunta == 2 || pregunta == 6) {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][2]);
+            incorrecta++;
+        }
+        else if (pregunta == 1 || pregunta == 7) {
             $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][1]);
+            incorrecta++;
+        }
+        else if (pregunta == 3 || pregunta == 5) {
+            $(".correctanswer").text("Correct Answer was: " + window['pregunta' + pregunta][3]);
             incorrecta++;
         }
         pregunta++;
         seconds = 5;
-        if(pregunta==8){
-            paso = 3;}
-            else paso=2;
+        if (pregunta == 8) {
+            paso = 3;
+        }
+        else paso = 2;
         run();
 
     });
