@@ -24,6 +24,8 @@ $(".startbtn").click(function () {
     $(".a4").text(window['pregunta' + pregunta][4]);
     $("#remain").text("Remain time 5");
     function run() {
+        imagengif="assets/images/"+(pregunta)+".gif";
+        $(".gifs").attr("src",imagengif);
         if (paso == 3) {
             $(".t1").css("display", "none");
             $(".s2").css("display", "none");
@@ -104,7 +106,6 @@ $(".startbtn").click(function () {
             }
             else paso = 2;
             seconds = 5;
-            incorrecta++;
             run();
 
         }

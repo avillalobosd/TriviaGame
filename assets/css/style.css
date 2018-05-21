@@ -7,7 +7,7 @@ body{
 }
 
 .backs{
-    height:600px;
+    height:700px;
     text-align: center;
     background-color: gray;
 }
@@ -18,7 +18,7 @@ body{
     color: black;
     font-size: 30px;
     font-weight: bold;
-    padding-top: 80px;
+    /* padding-top: 80px; */
 }
 
 .titles1{
@@ -30,6 +30,11 @@ body{
 .s2, .t1, .r1{
     font-size: 30px;
     font-weight: bold;
+
+}
+
+.gifs{
+    height: 200px;
 
 }
 
